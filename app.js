@@ -26,7 +26,8 @@ const app = {
         window.location = 'products.html'
       })
       .catch((error) => {
-        console.log(res.data.message)
+        console.log(error.message)
+        this.user.password = ''
       })
       
     }
