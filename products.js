@@ -14,14 +14,14 @@ const app = {
       const url = `${this.apiUrl}/api/user/check`
       axios.post(url)
       .then(() => {
-        this.getData()
+        this.getProducts()
       })
       .catch((err) => {
         alert(err.data.message)
         window.location = 'index.html'
       })
     },
-    getData() {
+    getProducts() {
       const url = `${this.apiUrl}/api/${this.apiPath}/admin/products`
       axios.get(url)
       .then((res) => {
@@ -31,7 +31,7 @@ const app = {
         alert(err.data.message)
       })
     },
-    openProduct(item) {
+    showDetail(item) {
       this.tempProduct = item
     }
   },
